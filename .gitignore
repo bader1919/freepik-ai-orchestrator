@@ -18,8 +18,10 @@ var/
 wheels/
 *.egg-info/
 .installed.cfg
-*.egg
-MANIFEST
+
+# Project specific - ignore duplicate database files
+database/migrations/001_initial_clean.sql
+site/
 
 # Environment variables
 .env
