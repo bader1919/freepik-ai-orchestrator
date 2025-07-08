@@ -1,12 +1,6 @@
 # 🎨 Freepik AI Orchestrator
 
-[![Documentation](https://img.shields.io/badge/docs-MkDocs-blue)](https://yourusername.github.io/freepik-ai-orchestrator/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-
 Professional AI-powered image generation platform with LLM optimization for Freepik API. Built with Streamlit for beautiful, interactive user experience.
-
-📚 **[View Full Documentation](https://yourusername.github.io/freepik-ai-orchestrator/)**
 
 ## ✨ Features
 
@@ -142,10 +136,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- � **[Complete Documentation](https://yourusername.github.io/freepik-ai-orchestrator/)** - Installation, usage, and API reference
-- �📧 Email: support@yourcompany.com
+- 📧 Email: support@yourcompany.com
 - 💬 Discord: [Join our community](https://discord.gg/yourserver)
-- � Issues: [GitHub Issues](https://github.com/yourusername/freepik-ai-orchestrator/issues)
+- 📖 Documentation: [Full docs](./docs/)
 
 ## 🙏 Acknowledgments
 
