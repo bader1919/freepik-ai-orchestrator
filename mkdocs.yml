@@ -96,11 +96,11 @@ nav:
     - Configuration: configuration.md
     - Quick Start: quickstart.md
   - User Guide:
-    - Usage: usage.md
+    - Usage: USAGE.md
     - Features: features.md
     - Troubleshooting: troubleshooting.md
   - API Reference:
-    - API Overview: api.md
+    - API Overview: API.md
     - Core Modules: api/core.md
     - Client Reference: api/client.md
   - Development:
@@ -108,7 +108,7 @@ nav:
     - Contributing: development/contributing.md
     - Testing: development/testing.md
   - Deployment:
-    - Deployment Guide: deployment.md
+    - Deployment Guide: DEPLOYMENT.md
     - Docker: deployment/docker.md
     - Production: deployment/production.md
   - Business:
