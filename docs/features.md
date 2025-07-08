@@ -529,4 +529,4 @@ Deploy and scale on major cloud platforms.
 - Presentation visuals
 - Course content assets
 
-Ready to explore these features? Start with our [Quick Start Guide](quickstart.md) or dive into the [Usage Guide](usage.md) for detailed instructions!
+Ready to explore these features? Start with our [Quick Start Guide](quickstart.md) or dive into the [Usage Guide](USAGE.md) for detailed instructions!

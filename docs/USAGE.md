@@ -825,7 +825,7 @@ Gather the following information:
 4. **Browser/System Info**: For web interface issues
 5. **API Logs**: For integration issues
 
-Ready to create amazing images? Start with the [Quick Start Guide](quickstart.md) or explore our [API Reference](api.md) for integration details!
+Ready to create amazing images? Start with the [Quick Start Guide](quickstart.md) or explore our [API Reference](API.md) for integration details!
 
 ## Core Features
 

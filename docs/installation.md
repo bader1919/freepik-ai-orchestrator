@@ -242,6 +242,6 @@ Now that you have the Freepik AI Orchestrator installed:
 
 1. **Configuration**: Review the [Configuration Guide](configuration.md)
 2. **Quick Start**: Follow the [Quick Start Tutorial](quickstart.md)
-3. **Usage**: Learn about [Features and Usage](usage.md)
+3. **Usage**: Learn about [Features and Usage](USAGE.md)
 
 Congratulations! You're ready to start generating amazing images with AI! 🎉

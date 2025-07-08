@@ -286,8 +286,8 @@ professional atmosphere, clean and minimal design
 Congratulations! You've successfully generated your first images with the Freepik AI Orchestrator. Here's what to explore next:
 
 ### Learn More
-- [Detailed Usage Guide](usage.md): Comprehensive feature documentation
-- [API Reference](api.md): Technical integration details
+- [Detailed Usage Guide](USAGE.md): Comprehensive feature documentation
+- [API Reference](API.md): Technical integration details
 - [Configuration](configuration.md): Advanced setup options
 
 ### Advanced Features

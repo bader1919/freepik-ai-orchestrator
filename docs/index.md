@@ -66,7 +66,7 @@ The Freepik AI Orchestrator is a comprehensive platform that bridges the gap bet
     New to Freepik AI Orchestrator? Start with our [Installation Guide](installation.md) and [Quick Start](quickstart.md) tutorial.
 
 !!! info "For Developers"
-    Check out our [API Reference](api.md) and [Architecture Guide](development/architecture.md) for technical details.
+    Check out our [API Reference](API.md) and [Architecture Guide](development/architecture.md) for technical details.
 
 !!! note "For Business Users"
     Learn about our [Business Model](business/model.md) and [Pricing Structure](business/pricing.md).

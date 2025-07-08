@@ -364,4 +364,4 @@ With your configuration complete:
 3. **Monitor**: Set up monitoring and logging
 4. **Optimize**: Tune performance based on usage patterns
 
-For detailed usage instructions, see the [Usage Guide](usage.md).
+For detailed usage instructions, see the [Usage Guide](USAGE.md).

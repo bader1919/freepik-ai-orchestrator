@@ -375,4 +375,4 @@ def handle_webhook():
     return "OK"
 ```
 
-For more detailed examples and advanced usage patterns, see the [Usage Guide](../usage.md) and [API Reference](../api.md).
+For more detailed examples and advanced usage patterns, see the [Usage Guide](../USAGE.md) and [API Reference](../API.md).

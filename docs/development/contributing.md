@@ -504,7 +504,7 @@ We use [Semantic Versioning](https://semver.org/):
 
 - **Documentation**: [Full documentation](https://freepik-ai-orchestrator.readthedocs.io)
 - **API Reference**: [API docs](../API.md)
-- **Examples**: [Usage examples](../usage.md)
+- **Examples**: [Usage examples](../USAGE.md)
 - **Troubleshooting**: [Common issues](../troubleshooting.md)
 
 ### Community
