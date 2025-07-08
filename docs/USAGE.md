@@ -1,53 +1,831 @@
 # Usage Guide
 
-This guide provides comprehensive instructions for using the Freepik AI Orchestrator platform.
+This comprehensive guide covers all features and capabilities of the Freepik AI Orchestrator platform.
 
-## Getting Started
+## Overview
 
-### 1. Account Setup
+The Freepik AI Orchestrator is designed to make AI image generation accessible and powerful. Whether you're creating professional content, artistic projects, or commercial materials, this guide will help you master the platform.
 
-1. **Sign up** for an account at [freepik-orchestrator.com](https://freepik-orchestrator.com)
-2. **Verify your email** address
-3. **Choose your plan**: Free, Professional, or Enterprise
-4. **Get your API key** from the dashboard
+## User Interface
 
-### 2. First Image Generation
+### Dashboard Layout
 
-1. **Open the application** in your browser
-2. **Enter your prompt** in the main text area
-3. **Select preferences** (optional)
-4. **Click "Generate Image"**
-5. **Wait for results** (30-60 seconds for most models)
+The main dashboard is organized into several key sections:
 
-## User Interface Guide
+#### Navigation Sidebar
+- **Dashboard**: Main generation interface
+- **Gallery**: View all generated images
+- **Analytics**: Usage statistics and insights
+- **Workflows**: Pre-built automation templates
+- **Settings**: Account and preferences
 
-### Main Dashboard
+#### Main Generation Panel
+- **Prompt Input**: Text area for image descriptions
+- **Model Selection**: Choose AI models
+- **Settings Panel**: Configure generation parameters
+- **Generate Button**: Start image creation
 
-The dashboard provides access to all major features:
+#### Results Area
+- **Image Display**: View generated images
+- **Metadata Panel**: Generation details
+- **Download Options**: Save in various formats
+- **Post-Processing**: Enhancement tools
 
-- **Generate Tab**: Create new images
-- **Analytics Tab**: View usage statistics
-- **Workflows Tab**: Access predefined workflows
-- **Settings Tab**: Configure preferences
+### Key Interface Elements
 
-### Generation Interface
+#### Prompt Input Area
 
-#### Prompt Input
-- **Main prompt area**: Describe your desired image
-- **Quick templates**: Use predefined prompts for common use cases
-- **Enhancement studio**: Access advanced prompt optimization tools
+The prompt input is your primary tool for communicating with the AI:
 
-#### Preferences Panel
-- **Model selection**: Choose specific AI models or use auto-selection
-- **Style preferences**: Set artistic direction
-- **Quality settings**: Adjust output quality and creativity levels
-- **Aspect ratio**: Select image dimensions
+**Features:**
+- Auto-save drafts
+- Prompt history
+- Template library
+- LLM optimization toggle
 
-#### Results Panel
-- **Image gallery**: View generated images
-- **Download options**: Save images in various formats
-- **Post-processing**: Access upscaling and enhancement tools
-- **Metadata**: View generation details and settings
+**Best Practices:**
+- Be descriptive and specific
+- Include technical details when needed
+- Specify artistic style or mood
+- Mention camera/photography details for realistic images
+
+#### Model Selection
+
+Choose the right AI model for your needs:
+
+**Auto-Selection (Recommended)**
+- AI analyzes your prompt
+- Selects optimal model automatically
+- Balances quality, speed, and cost
+
+**Manual Selection**
+- **Classic Fast**: Quick iterations (10-15 seconds)
+- **Flux Dev**: Balanced quality and speed (30-45 seconds)
+- **Imagen3**: High-quality photorealistic (45-60 seconds)
+- **Mystic**: Artistic and creative styles (30-90 seconds)
+
+## Core Features
+
+### LLM-Powered Prompt Enhancement
+
+The platform automatically optimizes your prompts using advanced language models:
+
+#### How It Works
+
+1. **Analysis**: LLM analyzes your input prompt
+2. **Enhancement**: Adds technical and stylistic details
+3. **Optimization**: Structures for best AI model performance
+4. **Generation**: Uses enhanced prompt for image creation
+
+#### Examples
+
+**Basic Input:**
+```
+business headshot
+```
+
+**LLM Enhancement:**
+```
+Professional business headshot of a person, confident expression, 
+modern office background, natural lighting, shot with Canon 5D Mark IV, 
+85mm lens, sharp focus, high resolution, professional photography
+```
+
+**Artistic Input:**
+```
+cat painting
+```
+
+**LLM Enhancement:**
+```
+Digital art painting of a majestic cat, artistic brush strokes, 
+vibrant colors, detailed fur texture, expressive eyes, 
+creative composition, high resolution illustration, digital art masterpiece
+```
+
+### Advanced Prompt Engineering
+
+#### Structure for Success
+
+**Format: Subject + Style + Technical + Mood**
+
+**Example:**
+- **Subject**: "Professional businesswoman"
+- **Style**: "Corporate photography style"
+- **Technical**: "Shot with 85mm lens, shallow depth of field"
+- **Mood**: "Confident and approachable expression"
+
+**Combined:**
+```
+Professional businesswoman, corporate photography style, 
+shot with 85mm lens, shallow depth of field, 
+confident and approachable expression
+```
+
+#### Negative Prompts
+
+Use negative prompts to avoid unwanted elements:
+
+```
+Positive: "Beautiful landscape with mountains and lake"
+Negative: "no people, no buildings, no text, no watermarks"
+```
+
+### Model Deep Dive
+
+#### Classic Fast
+**Best For:** Quick iterations, testing concepts, simple images
+**Characteristics:**
+- Fastest processing (10-15 seconds)
+- Good quality for basic needs
+- Lower computational cost
+- Ideal for rapid prototyping
+
+**Use Cases:**
+- Concept testing
+- Simple graphics
+- Social media content
+- Quick mockups
+
+#### Flux Dev
+**Best For:** Balanced quality and speed, general purpose
+**Characteristics:**
+- Medium processing time (30-45 seconds)
+- High quality results
+- Versatile across styles
+- Good cost-performance ratio
+
+**Use Cases:**
+- Marketing materials
+- Blog illustrations
+- Presentation graphics
+- General content creation
+
+#### Imagen3
+**Best For:** Photorealistic images, professional photography
+**Characteristics:**
+- Excellent photorealism (45-60 seconds)
+- Superior detail and accuracy
+- Natural lighting and textures
+- Professional quality output
+
+**Use Cases:**
+- Product photography
+- Professional headshots
+- Stock photography
+- Commercial content
+
+#### Mystic
+**Best For:** Artistic styles, creative expression
+**Characteristics:**
+- Variable processing time (30-90 seconds)
+- Unique artistic capabilities
+- Creative interpretation
+- Premium quality artistic output
+
+**Use Cases:**
+- Concept art
+- Artistic illustrations
+- Creative projects
+- Unique visual styles
+
+## Workflows
+
+Pre-built workflows automate complex multi-step processes for common use cases.
+
+### Professional Headshots Workflow
+
+**Steps:**
+1. Generate base image with Imagen3
+2. Apply professional lighting enhancement
+3. Background optimization
+4. Upscale to 4K resolution
+5. Create multiple lighting variations
+
+**Configuration:**
+```json
+{
+  "workflow": "professional_headshots",
+  "prompt": "Business professional headshot",
+  "settings": {
+    "lighting": "professional",
+    "background": "office",
+    "upscale": "4x",
+    "variations": 3
+  }
+}
+```
+
+### Product Photography Workflow
+
+**Steps:**
+1. Generate product image
+2. Remove/replace background
+3. Apply studio lighting
+4. Create multiple angles
+5. Optimize for e-commerce
+
+**Configuration:**
+```json
+{
+  "workflow": "product_photography",
+  "prompt": "White sneaker product shot",
+  "settings": {
+    "background": "white_studio",
+    "lighting": "studio",
+    "angles": ["front", "side", "three_quarter"],
+    "resolution": "high"
+  }
+}
+```
+
+### Marketing Materials Workflow
+
+**Steps:**
+1. Generate base design
+2. Create style variations
+3. Generate multiple aspect ratios
+4. Apply brand guidelines
+5. Optimize for different platforms
+
+**Configuration:**
+```json
+{
+  "workflow": "marketing_materials",
+  "prompt": "Summer sale promotion",
+  "settings": {
+    "brand_colors": ["#FF6B6B", "#4ECDC4"],
+    "formats": ["square", "story", "banner"],
+    "variations": 5
+  }
+}
+```
+
+## Post-Processing
+
+Enhance generated images with powerful AI-driven post-processing tools.
+
+### Upscaling
+
+**2x Upscaling**
+- Doubles image resolution
+- Maintains quality
+- Fast processing
+- Ideal for web use
+
+**4x Upscaling**
+- Quadruples resolution
+- Premium quality enhancement
+- Longer processing time
+- Print-ready quality
+
+**Smart Enhancement**
+- AI-powered detail improvement
+- Noise reduction
+- Sharpness optimization
+- Automatic quality boost
+
+### Relighting
+
+Transform lighting in generated images:
+
+**Professional Portrait**
+- Optimized for headshots
+- Natural skin tones
+- Professional appearance
+- Business-appropriate lighting
+
+**Studio Lighting**
+- Commercial photography style
+- Dramatic shadows
+- High contrast
+- Professional product shots
+
+**Natural Lighting**
+- Outdoor/window light effect
+- Soft, even illumination
+- Warm, natural tones
+- Lifestyle photography feel
+
+**Dramatic Lighting**
+- Artistic mood lighting
+- Strong contrast
+- Creative shadows
+- Cinematic effect
+
+### Background Tools
+
+**Remove Background**
+- Create transparent PNG files
+- Perfect edge detection
+- Preserve fine details
+- E-commerce ready
+
+**Replace Background**
+- Swap backgrounds seamlessly
+- Maintain lighting consistency
+- Preserve subject quality
+- Creative flexibility
+
+**Blur Background**
+- Create depth-of-field effects
+- Focus attention on subject
+- Professional photography look
+- Adjustable blur intensity
+
+### Style Transfer
+
+**Artistic Styles**
+- Impressionist painting
+- Abstract art
+- Watercolor effect
+- Oil painting style
+
+**Photographic Styles**
+- Vintage film look
+- Black and white
+- Sepia tone
+- HDR effect
+
+**Brand Styles**
+- Consistent visual identity
+- Custom color palettes
+- Brand-specific effects
+- Corporate guidelines
+
+## Advanced Features
+
+### API Integration
+
+Integrate the platform into your applications using our RESTful API.
+
+#### Authentication
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     -H "Content-Type: application/json" \
+     https://api.freepik-orchestrator.com/v1/generate
+```
+
+#### Basic Generation
+
+**Python Example:**
+```python
+import requests
+
+def generate_image(prompt, model="auto"):
+    headers = {
+        "Authorization": f"Bearer {API_KEY}",
+        "Content-Type": "application/json"
+    }
+    
+    data = {
+        "prompt": prompt,
+        "model": model,
+        "webhook_url": "https://your-app.com/webhook"
+    }
+    
+    response = requests.post(
+        "https://api.freepik-orchestrator.com/v1/generate",
+        headers=headers,
+        json=data
+    )
+    
+    return response.json()
+
+# Usage
+result = generate_image("Professional headshot")
+task_id = result["task_id"]
+```
+
+**JavaScript Example:**
+```javascript
+async function generateImage(prompt, model = "auto") {
+    const response = await fetch('/api/v1/generate', {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${API_KEY}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            prompt: prompt,
+            model: model
+        })
+    });
+    
+    return await response.json();
+}
+
+// Usage
+const result = await generateImage("Professional headshot");
+console.log(result.task_id);
+```
+
+### Webhook Integration
+
+Receive real-time notifications when images are ready.
+
+#### Setup
+
+1. Provide webhook URL in generation request
+2. Implement webhook endpoint in your application
+3. Verify webhook signatures for security
+4. Handle different event types
+
+#### Webhook Handler Example
+
+**Python (Flask):**
+```python
+import hmac
+import hashlib
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+WEBHOOK_SECRET = "your_webhook_secret"
+
+@app.route('/webhook', methods=['POST'])
+def handle_webhook():
+    # Verify signature
+    signature = request.headers.get('X-Freepik-Signature')
+    payload = request.get_data()
+    
+    expected = hmac.new(
+        WEBHOOK_SECRET.encode(),
+        payload,
+        hashlib.sha256
+    ).hexdigest()
+    
+    if not hmac.compare_digest(f"sha256={expected}", signature):
+        return jsonify({"error": "Invalid signature"}), 401
+    
+    # Process webhook
+    data = request.json
+    event_type = data.get('event')
+    
+    if event_type == 'generation.completed':
+        task_id = data['data']['task_id']
+        image_url = data['data']['image_url']
+        # Process completed image
+        
+    elif event_type == 'generation.failed':
+        task_id = data['data']['task_id']
+        error = data['data']['error']
+        # Handle generation failure
+        
+    return jsonify({"status": "ok"})
+```
+
+**Node.js (Express):**
+```javascript
+const express = require('express');
+const crypto = require('crypto');
+const app = express();
+
+app.use(express.raw({ type: 'application/json' }));
+
+app.post('/webhook', (req, res) => {
+    const signature = req.headers['x-freepik-signature'];
+    const payload = req.body;
+    
+    const expected = crypto
+        .createHmac('sha256', WEBHOOK_SECRET)
+        .update(payload)
+        .digest('hex');
+    
+    if (signature !== `sha256=${expected}`) {
+        return res.status(401).json({ error: 'Invalid signature' });
+    }
+    
+    const data = JSON.parse(payload);
+    
+    switch (data.event) {
+        case 'generation.completed':
+            handleCompletedGeneration(data.data);
+            break;
+        case 'generation.failed':
+            handleFailedGeneration(data.data);
+            break;
+    }
+    
+    res.json({ status: 'ok' });
+});
+```
+
+### Batch Processing
+
+Process multiple images efficiently for high-volume applications.
+
+#### Workflow Batching
+
+```python
+# Process multiple similar requests
+workflow_requests = [
+    {"prompt": "CEO headshot", "identifier": "john_doe"},
+    {"prompt": "CTO headshot", "identifier": "jane_smith"},
+    {"prompt": "CFO headshot", "identifier": "bob_johnson"}
+]
+
+batch_results = []
+for request in workflow_requests:
+    result = client.execute_workflow(
+        "professional_headshot",
+        request["prompt"],
+        metadata={"identifier": request["identifier"]}
+    )
+    batch_results.append(result)
+```
+
+#### Async Processing
+
+```javascript
+// Process multiple requests concurrently
+const prompts = [
+    "Mountain landscape at sunset",
+    "Ocean waves crashing on rocks",
+    "Forest path in autumn"
+];
+
+const promises = prompts.map(prompt => 
+    generateImage(prompt, {
+        webhook_url: 'https://your-app.com/webhook'
+    })
+);
+
+try {
+    const results = await Promise.all(promises);
+    console.log('All generations started:', results);
+} catch (error) {
+    console.error('Batch processing error:', error);
+}
+```
+
+## Best Practices
+
+### Prompt Writing Guidelines
+
+#### Be Specific and Descriptive
+
+**Poor Example:**
+```
+person at work
+```
+
+**Good Example:**
+```
+Professional businesswoman in modern office, confident posture, 
+business attire, natural lighting, working at desk with laptop
+```
+
+#### Include Technical Photography Details
+
+**For Realistic Images:**
+```
+Shot with Canon 5D Mark IV, 85mm lens, f/1.8 aperture, 
+shallow depth of field, professional lighting setup
+```
+
+**For Product Photography:**
+```
+Studio lighting, white background, high resolution, 
+commercial photography, clean composition
+```
+
+#### Specify Artistic Style
+
+**For Illustrations:**
+```
+Digital art illustration, vibrant colors, detailed artwork, 
+concept art style, trending on ArtStation
+```
+
+**For Paintings:**
+```
+Oil painting style, impressionist technique, 
+rich textures, artistic brushstrokes
+```
+
+### Model Selection Strategy
+
+#### Decision Matrix
+
+| Use Case | Recommended Model | Reason |
+|----------|------------------|---------|
+| Professional headshots | Imagen3 | Best photorealism |
+| Product photography | Imagen3 | Commercial quality |
+| Marketing graphics | Flux Dev | Speed + quality balance |
+| Concept art | Mystic | Artistic capabilities |
+| Quick iterations | Classic Fast | Speed |
+| General content | Auto-selection | AI optimization |
+
+#### Cost vs Quality
+
+**High Budget Projects:**
+- Use Imagen3 or Mystic
+- Enable post-processing
+- Generate multiple variations
+
+**Medium Budget Projects:**
+- Use Flux Dev
+- Selective post-processing
+- Focus on prompt optimization
+
+**Low Budget Projects:**
+- Use Classic Fast
+- Optimize prompts carefully
+- Minimal post-processing
+
+### Performance Optimization
+
+#### Reduce Processing Time
+
+1. **Use Classic Fast** for testing
+2. **Optimize prompts** before final generation
+3. **Batch similar requests** together
+4. **Use webhooks** for async processing
+
+#### Improve Quality
+
+1. **Iterate on prompts** based on results
+2. **Use appropriate models** for content type
+3. **Apply post-processing** selectively
+4. **Study successful prompts** in your use case
+
+#### Manage Costs
+
+1. **Use auto-selection** for optimal model choice
+2. **Cache common results** to avoid regeneration
+3. **Monitor usage** in analytics dashboard
+4. **Set up alerts** for usage thresholds
+
+## Analytics and Monitoring
+
+### Usage Dashboard
+
+Track your platform usage with comprehensive analytics:
+
+#### Key Metrics
+
+**Daily Activity**
+- Number of generations
+- Success/failure rates
+- Average processing time
+- Cost per generation
+
+**Model Performance**
+- Usage by model
+- Quality ratings
+- Processing time comparison
+- Cost analysis
+
+**Prompt Analysis**
+- Most successful prompts
+- Common failure patterns
+- Enhancement effectiveness
+- Trending keywords
+
+#### Business Intelligence
+
+**Cost Analysis**
+- Monthly spending trends
+- Cost per model
+- ROI calculations
+- Budget forecasting
+
+**Quality Metrics**
+- User satisfaction scores
+- Regeneration rates
+- Post-processing usage
+- Success patterns
+
+### Optimization Insights
+
+Use analytics to optimize your usage:
+
+#### Identify Patterns
+
+1. **Best performing prompts** for your use case
+2. **Optimal model selection** for different content types
+3. **Most effective enhancement techniques**
+4. **Cost-efficient workflows**
+
+#### Continuous Improvement
+
+1. **A/B test different prompts**
+2. **Compare model performance**
+3. **Track quality over time**
+4. **Optimize based on data**
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+#### Generation Failures
+
+**Issue**: "Generation Failed" error
+**Causes & Solutions:**
+
+1. **Invalid API Key**
+   - Verify key in settings
+   - Check key permissions
+   - Regenerate if necessary
+
+2. **Insufficient Credits**
+   - Check account balance
+   - Upgrade plan if needed
+   - Monitor usage patterns
+
+3. **Content Policy Violation**
+   - Review prompt content
+   - Avoid prohibited subjects
+   - Use content guidelines
+
+4. **Model Unavailable**
+   - Try different model
+   - Check system status
+   - Use auto-selection
+
+#### Quality Issues
+
+**Issue**: Poor quality results
+**Solutions:**
+
+1. **Improve Prompt Quality**
+   - Add more descriptive details
+   - Include technical specifications
+   - Specify artistic style
+
+2. **Try Different Models**
+   - Test Imagen3 for realism
+   - Use Mystic for artistic content
+   - Compare results across models
+
+3. **Use Post-Processing**
+   - Apply upscaling
+   - Enhance lighting
+   - Improve composition
+
+4. **Iterate and Refine**
+   - Analyze successful prompts
+   - Build prompt templates
+   - Learn from feedback
+
+#### Performance Issues
+
+**Issue**: Slow processing times
+**Solutions:**
+
+1. **Choose Faster Models**
+   - Use Classic Fast for testing
+   - Consider Flux Dev for balance
+   - Reserve premium models for final output
+
+2. **Optimize Workflow**
+   - Use async processing
+   - Implement efficient batching
+   - Monitor system load
+
+3. **Account Configuration**
+   - Upgrade for priority processing
+   - Check rate limits
+   - Optimize API usage
+
+### Error Codes
+
+| Code | Description | Solution |
+|------|-------------|----------|
+| 400 | Bad Request | Check request format |
+| 401 | Unauthorized | Verify API key |
+| 403 | Forbidden | Check permissions |
+| 429 | Rate Limited | Reduce request frequency |
+| 500 | Server Error | Contact support |
+
+### Getting Support
+
+#### Self-Service Resources
+
+1. **Documentation**: Complete guides and references
+2. **Status Page**: System status and incidents
+3. **Community Forum**: User discussions and tips
+4. **Video Tutorials**: Step-by-step guides
+
+#### Direct Support
+
+1. **Email Support**: support@freepik-orchestrator.com
+2. **Live Chat**: Available during business hours
+3. **Discord Community**: Real-time help and discussions
+4. **Enterprise Support**: Dedicated support for enterprise customers
+
+#### Before Contacting Support
+
+Gather the following information:
+
+1. **Account Details**: Username, plan type
+2. **Error Information**: Error messages, codes
+3. **Request Details**: Prompts, models used
+4. **Browser/System Info**: For web interface issues
+5. **API Logs**: For integration issues
+
+Ready to create amazing images? Start with the [Quick Start Guide](quickstart.md) or explore our [API Reference](api.md) for integration details!
 
 ## Core Features
 

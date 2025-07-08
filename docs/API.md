@@ -1,103 +1,110 @@
-# Freepik AI Orchestrator API Documentation
+# API Reference
+
+Complete API documentation for the Freepik AI Orchestrator platform.
 
 ## Overview
 
-The Freepik AI Orchestrator provides a comprehensive API for AI-powered image generation with LLM optimization. This document outlines the available endpoints and their usage.
+The Freepik AI Orchestrator API provides programmatic access to our AI-powered image generation platform. The API supports synchronous and asynchronous image generation, workflow execution, and comprehensive management features.
 
-## Authentication
+### Key Features
 
-All API endpoints require authentication using an API key:
+- **REST API**: Standard HTTP methods and JSON responses
+- **Authentication**: Secure API key-based authentication
+- **Rate Limiting**: Built-in rate limiting with clear headers
+- **Webhooks**: Real-time notifications for async operations
+- **Error Handling**: Detailed error messages and codes
+- **Pagination**: Efficient handling of large datasets
 
-```bash
-Authorization: Bearer YOUR_API_KEY
-```
+## Getting Started
 
-## Base URL
+### Base URL
+
+All API requests should be made to:
 
 ```
 https://api.freepik-orchestrator.com/v1
 ```
 
-## Endpoints
+### Authentication
+
+Include your API key in the Authorization header:
+
+```bash
+Authorization: Bearer YOUR_API_KEY
+```
+
+### Rate Limits
+
+API requests are rate limited by plan:
+
+| Plan | Requests/Minute | Requests/Hour |
+|------|----------------|---------------|
+| Free | 10 | 100 |
+| Professional | 60 | 1,000 |
+| Enterprise | 300 | 10,000 |
+
+Rate limit headers are included in responses:
+
+```
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 45
+X-RateLimit-Reset: 1640995200
+```
+
+## Core Endpoints
 
 ### Image Generation
 
 #### Generate Image
-Generate an image using the optimized workflow.
+
+Create a new image using AI models with LLM optimization.
 
 **Endpoint:** `POST /generate`
 
-**Request Body:**
-```json
-{
-  "prompt": "Professional headshot of a businesswoman",
-  "model": "auto",
-  "style": "photorealistic",
-  "aspect_ratio": "16:9",
-  "quality_level": 8,
-  "webhook_url": "https://your-domain.com/webhook"
-}
+**Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `prompt` | string | Yes | Image description |
+| `model` | string | No | AI model (auto, mystic, imagen3, flux_dev, classic_fast) |
+| `style` | string | No | Style preset (photorealistic, artistic, cartoon) |
+| `aspect_ratio` | string | No | Image dimensions (1:1, 16:9, 9:16, 4:3, 3:4) |
+| `quality_level` | integer | No | Quality setting (1-10, default: 8) |
+| `webhook_url` | string | No | Webhook URL for async notifications |
+| `enhance_prompt` | boolean | No | Enable LLM prompt optimization (default: true) |
+
+**Request Example:**
+
+```bash
+curl -X POST "https://api.freepik-orchestrator.com/v1/generate" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "prompt": "Professional headshot of a businesswoman in modern office",
+    "model": "imagen3",
+    "style": "photorealistic",
+    "aspect_ratio": "1:1",
+    "quality_level": 9,
+    "webhook_url": "https://your-app.com/webhook"
+  }'
 ```
 
 **Response:**
+
 ```json
 {
   "task_id": "task_12345",
-  "model_used": "imagen3",
+  "model_used": "imagen3", 
   "status": "pending",
-  "estimated_completion": "30-60 seconds",
-  "webhook_callback": true
+  "original_prompt": "Professional headshot of a businesswoman in modern office",
+  "enhanced_prompt": "Professional business headshot of a confident businesswoman...",
+  "estimated_completion_time": 45,
+  "webhook_callback": true,
+  "created_at": "2024-01-15T10:30:00Z"
 }
 ```
 
-#### Check Generation Status
-Check the status of a generation task.
-
-**Endpoint:** `GET /generate/{task_id}`
-
-**Response:**
-```json
-{
-  "task_id": "task_12345",
-  "status": "completed",
-  "image_url": "https://cdn.freepik.com/result.jpg",
-  "thumbnail_url": "https://cdn.freepik.com/thumb.jpg",
-  "model_used": "imagen3",
-  "processing_time": 45,
-  "created_at": "2024-01-15T10:30:00Z",
-  "completed_at": "2024-01-15T10:30:45Z"
-}
-```
-
-### Workflow Management
-
-#### Execute Workflow
-Execute a predefined workflow.
-
-**Endpoint:** `POST /workflows/{workflow_id}/execute`
-
-**Request Body:**
-```json
-{
-  "prompt": "Professional headshot of a businesswoman",
-  "custom_params": {
-    "upscale_factor": 4,
-    "lighting_style": "professional"
-  }
-}
-```
-
-**Response:**
-```json
-{
-  "workflow_execution_id": "exec_67890",
-  "workflow_name": "professional_headshot",
-  "status": "running",
-  "estimated_completion": "3-4 minutes",
-  "steps": [
-    {
-      "step": 1,
-      "action": "generate",
+For complete API documentation with all endpoints, error handling, and examples, please refer to the full API reference documentation.
       "status": "completed",
       "result_url": "https://cdn.freepik.com/step1.jpg"
     },
