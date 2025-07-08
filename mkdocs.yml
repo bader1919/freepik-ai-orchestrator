@@ -1,0 +1,126 @@
+site_name: Freepik AI Orchestrator
+site_description: Professional AI-powered image generation platform with LLM optimization for Freepik API
+site_author: Freepik AI Team
+site_url: https://freepik-ai-orchestrator.readthedocs.io/
+
+# Repository
+repo_name: freepik-ai-orchestrator
+repo_url: https://github.com/yourusername/freepik-ai-orchestrator
+
+# Copyright
+copyright: Copyright &copy; 2024 Freepik AI Orchestrator
+
+# Theme
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+
+  icon:
+    repo: fontawesome/brands/github
+
+# Plugins
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji
+
+# Navigation
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: installation.md
+    - Configuration: configuration.md
+    - Quick Start: quickstart.md
+  - User Guide:
+    - Usage: usage.md
+    - Features: features.md
+    - Troubleshooting: troubleshooting.md
+  - API Reference:
+    - API Overview: api.md
+    - Core Modules: api/core.md
+    - Client Reference: api/client.md
+  - Development:
+    - Architecture: development/architecture.md
+    - Contributing: development/contributing.md
+    - Testing: development/testing.md
+  - Deployment:
+    - Deployment Guide: deployment.md
+    - Docker: deployment/docker.md
+    - Production: deployment/production.md
+  - Business:
+    - Business Model: business/model.md
+    - Pricing: business/pricing.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/freepik-ai-orchestrator
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/freepik/ai-orchestrator
+  version:
+    provider: mike
