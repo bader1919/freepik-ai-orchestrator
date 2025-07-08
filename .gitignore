@@ -45,6 +45,9 @@ logs/
 *.db
 *.sqlite3
 
+# MkDocs build output
+site/
+
 # OS
 .DS_Store
 Thumbs.db
