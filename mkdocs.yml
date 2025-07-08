@@ -1,11 +1,11 @@
 site_name: Freepik AI Orchestrator
 site_description: Professional AI-powered image generation platform with LLM optimization for Freepik API
 site_author: Freepik AI Team
-site_url: https://freepik-ai-orchestrator.readthedocs.io/
+site_url: https://bader1919.github.io/freepik-ai-orchestrator/
 
 # Repository
-repo_name: freepik-ai-orchestrator
-repo_url: https://github.com/yourusername/freepik-ai-orchestrator
+repo_name: bader1919/freepik-ai-orchestrator
+repo_url: https://github.com/bader1919/freepik-ai-orchestrator
 
 # Copyright
 copyright: Copyright &copy; 2024 Freepik AI Orchestrator
@@ -55,11 +55,6 @@ theme:
 # Plugins
 plugins:
   - search
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            docstring_style: google
 
 # Extensions
 markdown_extensions:
@@ -119,7 +114,7 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yourusername/freepik-ai-orchestrator
+      link: https://github.com/bader1919/freepik-ai-orchestrator
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/r/freepik/ai-orchestrator
   version:
